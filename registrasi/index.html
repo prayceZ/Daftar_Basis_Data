@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet" />
+    <title>Daftar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="et-hero-tabs">
+      <div class="et-hero-tabs-container">
+        <a class="et-hero-tab" href="beasiswa.html">Jenis Beasiswa</a>
+        <a class="et-hero-tab" href="index.html">Daftar</a>
+        <a class="et-hero-tab" href="#tab-react">Hasil</a>
+        <span class="et-hero-tab-slider"></span>
+      </div>
+    </nav>
+    <div class="posisi">
+      <div class="container">
+        <!-- batas -->
+        <h1 class="form-title">DAFTAR <span> BEASISWA </span></h1>
+        <div class="registration-form">
+          <form action="#" onsubmit="return validateForm()">
+            <div class="user-info">
+              <div class="user-input-box">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" />
+              </div>
+
+              <div class="user-input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" />
+              </div>
+              <div class="user-input-box">
+                <label for="prodi">Pilih Prodi:</label>
+                <select id="prodi" name="prodi" style="color: #999">
+                  <option value="" disabled selected>Pilih Prodi Anda</option>
+                  <option value="D3 Kebidanan">D3 Kebidanan</option>
+                  <option value="D3 Keperawatan">D3 Keperawatan</option>
+                  <option value="S1 Bimbingan Dan Konseling">S1 Bimbingan Dan Konseling</option>
+                  <option value="S1 Ilmu Keperawatan">S1 Ilmu Keperawatan</option>
+                  <option value="S1 PGPAUD">S1 PGPAUD</option>
+                  <option value="S1 PGSD">S1 PGSD</option>
+                  <option value="S1 Pendidikan Seni Drama Tari dan Music">S1 Pendidikan Seni Drama Tari dan Music</option>
+                  <option value="S1 Pendidikan Teknologi Informasi">S1 Pendidikan Teknologi Informasi</option>
+                  <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
+                  <option value="S1 Teknik Lingkungan">S1 Teknik Lingkungan</option>
+                  <option value="S1 Teknik Mesin">S1 Teknik Mesin</option>
+                  <option value="S1 Teknik Pertambangan">S1 Teknik Pertambangan</option>
+                </select>
+              </div>
+              <div class="user-input-box">
+                <label for="semester">Pilih Semester:</label>
+                <select id="semester" name="semester" style="color: #999">
+                  <option value="" disabled selected>Pilih Semester Saat ini</option>
+                  <option value="Semester 1">Semester 1</option>
+                  <option value="Semester 2">Semester 2</option>
+                  <option value="Semester 3">Semester 3</option>
+                  <option value="Semester 4">Semester 4</option>
+                  <option value="Semester 5">Semester 5</option>
+                  <option value="Semester 6">Semester 6</option>
+                  <option value="Semester 7">Semester 7</option>
+                  <option value="Semester 8">Semester 8</option>
+                </select>
+              </div>
+              <div class="user-input-box">
+                <label for="ipk">IPK Anda:</label>
+                <input type="number" id="ipk" step="0.01" placeholder="Contoh: 3.50" />
+                <button type="button" onclick="cekIPK()">OK</button>
+              </div>
+              <div id="ipkMessage" style="color: white">
+                <!-- Pesan akan muncul di sini -->
+              </div>
+              <div class="user-input-box">
+                <label for="jenisBeasiswa">Pilih Jenis Beasiswa:</label>
+                <select id="jenisBeasiswa" name="jenisBeasiswa" style="color: #999">
+                  <option value="" disabled selected>Pilih jenis beasiswa</option>
+                  <option value="Beasiswa A">Akademik</option>
+                  <option value="Beasiswa B">Non-Akademik</option>
+                </select>
+              </div>
+              <div class="user-input-box">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" />
+              </div>
+              <div class="user-input-box">
+                <label for="religion">Pilih Agama:</label>
+                <select id="religion" name="religion" style="color: #999">
+                  <option value="" disabled selected>Pilih Jenis Agama</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Katolik">Katolik</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Buddha">Buddha</option>
+                  <option value="Konghucu">Konghucu</option>
+                </select>
+              </div>
+              <div class="user-input-box">
+                <label for="photo">Unggah Foto (JPG, PNG):</label>
+                <input type="file" id="photo" name="photo" accept=".jpg, .png" />
+              </div>
+            </div>
+            <div class="gender-details-box">
+              <span class="gender-title">Gender</span>
+              <div class="gender-category">
+                <input type="radio" name="gender" id="Pria" />
+                <label for="Pria">Pria</label>
+                <input type="radio" name="gender" id="Perempuan" />
+                <label for="Perempuan">Perempuan</label>
+                <input type="radio" name="gender" id="other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+            <div class="form-submit-btn">
+              <input type="submit" value="Register" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      // navbar
+      class StickyNavigation {
+        constructor() {
+          this.currentId = null
+          this.currentTab = null
+          this.tabContainerHeight = 70
+          let self = this
+          $('.et-hero-tab').click(function () {
+            self.onTabClick(event, $(this))
+          })
+          $(window).scroll(() => {
+            this.onScroll()
+          })
+          $(window).resize(() => {
+            this.onResize()
+          })
+        }
+
+        onTabClick(event, element) {
+          event.preventDefault()
+          let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1
+          $('html, body').animate({ scrollTop: scrollTop }, 600)
+        }
+
+        onScroll() {
+          this.checkTabContainerPosition()
+          this.findCurrentTabSelector()
+        }
+
+        onResize() {
+          if (this.currentId) {
+            this.setSliderCss()
+          }
+        }
+
+        checkTabContainerPosition() {
+          let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight
+          if ($(window).scrollTop() > offset) {
+            $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top')
+          } else {
+            $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top')
+          }
+        }
+
+        findCurrentTabSelector(element) {
+          let newCurrentId
+          let newCurrentTab
+          let self = this
+          $('.et-hero-tab').each(function () {
+            let id = $(this).attr('href')
+            let offsetTop = $(id).offset().top - self.tabContainerHeight
+            let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight
+            if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+              newCurrentId = id
+              newCurrentTab = $(this)
+            }
+          })
+          if (this.currentId != newCurrentId || this.currentId === null) {
+            this.currentId = newCurrentId
+            this.currentTab = newCurrentTab
+            this.setSliderCss()
+          }
+        }
+
+        setSliderCss() {
+          let width = 0
+          let left = 0
+          if (this.currentTab) {
+            width = this.currentTab.css('width')
+            left = this.currentTab.offset().left
+          }
+          $('.et-hero-tab-slider').css('width', width)
+          $('.et-hero-tab-slider').css('left', left)
+        }
+      }
+
+      new StickyNavigation()
+      // email
+      function validateEmail() {
+        var email = document.getElementById('email').value
+        var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
+        if (!emailRegex.test(email)) {
+          alert('Masukkan alamat email yang valid (contoh: example@example.com)')
+          return false
+        }
+
+        return true
+      }
+
+      function validateForm() {
+        // ... (validasi lainnya)
+
+        if (!validateEmail()) {
+          return false
+        }
+
+        // ... (lanjutkan validasi lainnya jika diperlukan)
+
+        return true
+      }
+      //   wajib isi pop up
+      function validateForm() {
+        var fullName = document.getElementById('fullName').value
+        var semester = document.getElementById('semester').value
+        var email = document.getElementById('email').value
+        var ipk = parseFloat(document.getElementById('ipk').value)
+        var jenisBeasiswa = document.getElementById('jenisBeasiswa').value
+        var phoneNumber = document.getElementById('phoneNumber').value
+        var religion = document.getElementById('religion').value
+        var photo = document.getElementById('photo').value
+
+        if (fullName === '' || semester === '' || email === '' || isNaN(ipk) || jenisBeasiswa === '' || phoneNumber === '' || religion === '' || photo === '') {
+          alert('Harap isi semua kolom yang wajib!')
+          return false // Menghentikan pengiriman formulir jika ada yang belum diisi
+        }
+
+        if (ipk < 3.0) {
+          alert('Mohon Maaf, IPK Anda tidak memenuhi syarat untuk beasiswa.')
+          return false // Menghentikan pengiriman formulir jika IPK kurang dari 3.0
+        }
+
+        return true // Lanjutkan pengiriman formulir jika semua sudah diisi dan IPK memenuhi syarat
+      }
+      //   cek ipk
+      function cekIPK() {
+        var ipk = parseFloat(document.getElementById('ipk').value)
+        var ipkMessage = document.getElementById('ipkMessage')
+        var jenisBeasiswa = document.getElementById('jenisBeasiswa')
+
+        if (isNaN(ipk)) {
+          ipkMessage.innerHTML = '' // Hapus pesan jika IPK tidak valid
+          alert('Masukkan IPK yang valid.')
+          return
+        }
+
+        if (ipk >= 3.0) {
+          // IPK di atas atau sama dengan 3, aktifkan pilihan beasiswa
+          ipkMessage.innerHTML = '' // Hapus pesan jika IPK memenuhi syarat
+          jenisBeasiswa.disabled = false // Aktifkan jenis beasiswa
+        } else {
+          // IPK kurang dari 3, beritahu pengguna dan nonaktifkan jenis beasiswa
+          ipkMessage.innerHTML = '<h4>Mohon Maaf, IPK Anda tidak memenuhi syarat untuk beasiswa.</h2>'
+          jenisBeasiswa.disabled = true // Nonaktifkan jenis beasiswa
+        }
+      }
+      //   wajib isi yg belum ke isi warna merah
+      function validateForm() {
+        var fullName = document.getElementById('fullName')
+        var semester = document.getElementById('semester')
+        var email = document.getElementById('email')
+        var ipk = parseFloat(document.getElementById('ipk').value)
+        var jenisBeasiswa = document.getElementById('jenisBeasiswa')
+        var phoneNumber = document.getElementById('phoneNumber')
+        var religion = document.getElementById('religion')
+        var photo = document.getElementById('photo')
+
+        var isValid = true
+
+        function setRedBackground(inputElement) {
+          inputElement.style.backgroundColor = 'red'
+          inputElement.style.color = 'white'
+        }
+
+        function setNormalBackground(inputElement) {
+          inputElement.style.backgroundColor = ''
+          inputElement.style.color = '' // Menghapus warna teks merah
+        }
+
+        if (fullName.value === '') {
+          setRedBackground(fullName)
+          isValid = false
+        } else {
+          setNormalBackground(fullName)
+        }
+
+        if (semester.value === '') {
+          setRedBackground(semester)
+          isValid = false
+        } else {
+          setNormalBackground(semester)
+        }
+
+        if (email.value === '') {
+          setRedBackground(email)
+          isValid = false
+        } else {
+          setNormalBackground(email)
+        }
+
+        if (isNaN(ipk)) {
+          setRedBackground(document.getElementById('ipk'))
+          isValid = false
+        } else {
+          setNormalBackground(document.getElementById('ipk'))
+        }
+
+        if (jenisBeasiswa.value === '') {
+          setRedBackground(jenisBeasiswa)
+          isValid = false
+        } else {
+          setNormalBackground(jenisBeasiswa)
+        }
+
+        if (phoneNumber.value === '') {
+          setRedBackground(phoneNumber)
+          isValid = false
+        } else {
+          setNormalBackground(phoneNumber)
+        }
+
+        if (religion.value === '') {
+          setRedBackground(religion)
+          isValid = false
+        } else {
+          setNormalBackground(religion)
+        }
+
+        if (photo.value === '') {
+          setRedBackground(photo)
+          isValid = false
+        } else {
+          setNormalBackground(photo)
+        }
+
+        if (!isValid) {
+          alert('Harap isi semua kolom yang wajib!')
+        }
+
+        if (ipk < 3.0) {
+          alert('Mohon Maaf, IPK Anda tidak memenuhi syarat untuk beasiswa.')
+          isValid = false
+        }
+
+        return isValid
+      }
+    </script>
+  </body>
+</html>

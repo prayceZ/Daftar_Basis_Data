@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jenis Beasiswa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="beasiswa.css" />
+  </head>
+  <body>
+    <nav class="et-hero-tabs">
+      <div class="et-hero-tabs-container">
+        <a class="et-hero-tab" href="beasiswa.html">Jenis Beasiswa</a>
+        <a class="et-hero-tab" href="index.html">Daftar</a>
+        <a class="et-hero-tab" href="#tab-react">Hasil</a>
+        <span class="et-hero-tab-slider"></span>
+      </div>
+    </nav>
+    <!-- navbar -->
+    <div class="posisi">
+      <h1>Jenis Beasiswa</h1>
+      <p>Silakan pilih jenis beasiswa yang Anda minati:</p>
+      <!-- coba -->
+      <div class="container">
+        <div class="image-container" onclick="showAkademik()">
+          <h3>
+            Beasiswa <br />
+            Akademi
+          </h3>
+          <div class="image">
+            <img class="image_img" src="asset/toshjmosh_a_stunning_3D_cartoon_illustration_of_a_female_studen_ec68fda4-67a4-4399-a29e-f6fe0e1b1740.svg" alt="Beasiswa Akademik" />
+            <div class="image_overlay image_overlay-blur">
+              <div class="image_title"></div>
+
+              <p class="image_descr">
+                Beasiswa akademik adalah bantuan keuangan yang diberikan kepada mahasiswa berprestasi berdasarkan kinerja akademik mereka. Beasiswa ini bertujuan untuk mendorong dan mendukung
+                mahasiswa yang telah menunjukkan pencapaian akademik yang baik selama studi mereka.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image-container" onclick="showNonAkademik()">
+          <h3>
+            Beasiswa <br />
+            Non-Akademik
+          </h3>
+          <div class="image">
+            <img class="image_img" src="asset/toshjmosh_a_stunning_3D_cartoon_illustration_of_a_male_student__25db8c50-fd24-437a-8a50-39195302f967.svg" alt="Beasiswa Non-Akademik" />
+            <div class="image_overlay image_overlay-blur">
+              <div class="image_title"></div>
+              <p class="image_descr">
+                Beasiswa non-akademik adalah bentuk bantuan keuangan yang diberikan kepada mahasiswa berdasarkan kriteria atau prestasi di luar kinerja akademik mereka. Beasiswa ini diberikan untuk
+                mengakui prestasi dalam berbagai bidang lainnya, seperti bakat seni, olahraga, aktivitas sosial, atau pencapaian dalam komunitas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- coba -->
+
+      <div id="penjelasan"></div>
+    </div>
+    <script>
+      function showAkademik() {
+        document.getElementById('penjelasan').innerHTML = `
+       <div class="image_title">Beasiswa Prestasi Akademik</div>
+        <p class="image_descr">
+                Beasiswa akademik adalah bantuan keuangan yang diberikan <br />
+                kepada mahasiswa berprestasi berdasarkan kinerja akademik mereka. <br />
+                Beasiswa ini bertujuan untuk mendorong dan mendukung mahasiswa yang <br />
+                telah menunjukkan pencapaian akademik yang baik selama studi mereka.
+              </p>
+      `
+      }
+
+      function showNonAkademik() {
+        document.getElementById('penjelasan').innerHTML = `
+         <div class="image_title">Beasiswa Prestasi Non-Akademik</div>
+              <p class="image_descr">
+                Beasiswa non-akademik adalah bentuk bantuan keuangan yang diberikan <br />
+                kepada mahasiswa berdasarkan kriteria atau prestasi di luar kinerja<br />
+                akademik mereka. Beasiswa ini diberikan untuk mengakui prestasi dalam <br />
+                berbagai bidang lainnya, seperti bakat seni, olahraga, aktivitas sosial, <br />
+                 atau pencapaian dalam komunitas.
+              </p>
+      `
+      }
+    </script>
+  </body>
+</html>
